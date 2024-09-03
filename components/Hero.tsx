@@ -10,7 +10,7 @@ export default function Hero() {
       <p className="text-[#E2EAFF] font-medium sm:text-5xl text-3xl py-1">
         The No-Code
       </p>
-      <p className="text-[#88A9FF] font-medium sm:text-5xl text-3xl text-center py-1">
+      <p className="bg-gradient-to-b bg-clip-text text-transparent from-[#dae5fa] to-[#6790FF]  inline-block  font-medium sm:text-5xl text-3xl text-center py-1">
         AI automations platform
       </p>
       <p className="text-[#C2D2FF] text-center py-4 sm:text-lg text-md">
