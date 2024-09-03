@@ -1,39 +1,22 @@
-import Image from "next/image";
-import Logo from "../public/vector-shift-logo.png";
-import { Poppins } from "next/font/google";
-import downArrow from "../public/chevron-down.svg";
-const poppins = Poppins({
-  weight: ["100", "400", "500", "700"],
-  subsets: ["latin"],
-});
-
-const navItems = [
-  "Enterprise",
-  "Pricing",
-  "Tutorials",
-  "Docs",
-  "Blog",
-  "Discord",
-  "Log in",
-];
+'use client';
+import Image from 'next/image';
+import Logo from '../public/vector-shift-logo.png';
+import { ChevronDown } from 'lucide-react';
+import { navItems } from '@/utils/data';
+import { poppins } from '@/utils/font';
 
 export default function Navbar() {
   return (
     <nav
-      className={`${poppins.className} w-full h-10 bg-transparent text-white flex justify-between`}
+      className={`${poppins.className} w-full h-10 bg-transparent text-white flex sm:justify-between sm:px-44  `}
     >
-      <div className="w-1/6 flex items-center">
-        <Image src={Logo} alt="logo" className="w-6 h-6 mx-2" />
-        <p className="font-normal text-md">VectorShift</p>
+      <div className="sm:w-1/6 w-full flex items-center justify-center">
+        <Image src={Logo} alt="logo" className="sm:w-6 sm:h-6 w-5 h-5 mr-2" />
+        <p className="font-normal sm:text-md text-sm">VectorShift</p>
       </div>
-      <div className="w-5/6 flex items-center justify-end">
+      <div className="w-5/6 sm:flex hidden items-center justify-end ">
         <p className="text-[15px] px-4 flex items-center cursor-pointer hover:text-[#BC7DFE]">
-          Platform{" "}
-          <Image
-            src={downArrow}
-            alt="down-arrow-icon"
-            className="w-4 h-4 mx-1]"
-          />
+          Platform <ChevronDown className="w-5 h-5 mx-2" />
         </p>
         {navItems.map((item, i) => (
           <p
